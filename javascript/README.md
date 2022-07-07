@@ -151,7 +151,6 @@ var a;              // undefined
 var name = 'Simon'; // "Simon"
 ```
 
-</details>
 ## Operadores
 
 Los operadores numéricos disponibles son `+`, `-`, `*`, `/` y `%`. El operador de asignación es `=`. Además se puede realizar una operación-asignación utilizando un operador matemático seguido del operador de asignación (`+=`):
@@ -199,6 +198,8 @@ Los operadores de comparación son `<`, `>`, `<=`, `>=`, `==`, `!=`, `===` y `!=
 ```
 
 JavaScript también cuenta con [operadores binarios](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
+
+</details>
 
 ## Estructuras de control
 
