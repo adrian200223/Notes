@@ -6,6 +6,8 @@ Lenguaje multiparadigma, dinamicamente tipado y con objetos predefinidos.
 
 ## Tipos de datos
 
+<details> <summary>Pulsa para ampliar</summary>
+
 - Number
 - BigInt
 - String
@@ -120,7 +122,11 @@ Boolean(234); // true
 
 </details>
 
+</details>
+
 ## Variables
+
+<details> <summary>Pulsa para ampliar</summary>
 
 Las variables pueden declararse de las formas `let`, `const` y `var`.
 
@@ -145,6 +151,7 @@ var a;              // undefined
 var name = 'Simon'; // "Simon"
 ```
 
+</details>
 ## Operadores
 
 Los operadores numéricos disponibles son `+`, `-`, `*`, `/` y `%`. El operador de asignación es `=`. Además se puede realizar una operación-asignación utilizando un operador matemático seguido del operador de asignación (`+=`):
@@ -195,6 +202,8 @@ JavaScript también cuenta con [operadores binarios](https://developer.mozilla.o
 
 ## Estructuras de control
 
+<details> <summary>Pulsa para ampliar</summary>
+
 Las estructuras de control disponibles son:
 
 - `if-else`
@@ -215,7 +224,11 @@ const name = cachedName || (cachedName = getName());
 const allowed = (age > 18) ? 'yes' : 'no';
 ```
 
+</details>
+
 ## Objetos
+
+<details> <summary>Pulsa para ampliar</summary>
 
 Existen dos formas de crear un objeto vacío:
 
@@ -260,7 +273,17 @@ const you = new Person('You', 24); // Nombre "You" de edad 24
 
 <details> <summary>Pulsa para ampliar</summary>
 
-Los arrays son un tipo especifico de objeto. Cuentan con la propiedad `length` cuyo valor es uno más al valor del mayor índice utilizado:
+Los arrays son un tipo especifico de objeto. Pueden crearse de las siguientes formas:
+
+```javascript
+[element0, element1, /* ... ,*/ elementN]
+
+new Array(element0, element1, /* ... ,*/ elementN)
+
+new Array(arrayLength)
+```
+
+Cuentan con la propiedad `length` cuyo valor es uno más al valor del mayor índice utilizado:
 
 ```javascript
 const a = ['dog', 'cat', 'hen'];
@@ -421,7 +444,11 @@ La función `.apply()` tiene una hermana, `.call()`, la cual funciona igual pero
 
 </details>
 
+</details>
+
 ## Clausuras
+
+<details> <summary>Pulsa para ampliar</summary>
 
 Se pueden crear funciones a partir de funciones con los parámetros especificados:
 
@@ -438,3 +465,5 @@ const add20 = makeAdder(20);
 add5(6);  // 11
 add20(7); // 27
 ```
+
+</details>
