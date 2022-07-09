@@ -187,7 +187,7 @@ Cuando se realiza una operación con un string el resultado es convertido a `Str
  3 + 4 + '5'; // "75"
 ```
 
-Los operadores de comparación son `<`, `>`, `<=`, `>=`, `==`, `!=`, `===` y `!==`. El operador `==` compara los valores sin tener en cuenta el tipo de dato, mientras que `===` compara el valor y el tipo de dato:
+Los operadores de comparación son `<`, `>`, `<=`, `>=`, `==`, `!=`, `===` y `!==`. El operador `==` compara los valores, aunque cuando los tipos de datos de los extremos son distintos fuerza la conversión de tipos (teniendo un carácter impredecible), mientras que `===` compara el valor y el tipo de dato. Es por ello que se recomienda usar siempre `===`. Ejemplos:
 
 ```javascript
 123 == '123'; // true
@@ -195,6 +195,12 @@ Los operadores de comparación son `<`, `>`, `<=`, `>=`, `==`, `!=`, `===` y `!=
 
 123 === '123'; // false
 1 === true;    // false
+
+// Ejemplos de la imprevisibilidad del operador ==:
+"0" == 0 // true
+[] == 0 // true
+[1] == 1 // true
+[1,2] == 2 // false, esto es porque la lista [] se pasa a entero, devolverá 0 al estar vacía y 1 en otro caso 
 ```
 
 JavaScript también cuenta con [operadores binarios](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators).
@@ -268,6 +274,18 @@ function Person(name, age) {
 }
 
 const you = new Person('You', 24); // Nombre "You" de edad 24
+```
+
+Es posible utilizar los objetos para utilizar JavaScript con el paradigma OOP (Programación Orientada a Objetos):
+```javascript
+class Humanoid {
+  constructor() {
+    this.dna = 'human';
+  }
+  walk() {
+    console.log("This " + this.dna + " is going for a walk");
+  }
+}
 ```
 
 ### Arrays
